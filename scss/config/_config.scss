@@ -1,0 +1,17 @@
+:root {
+	@each $type, $shades in $colors {
+		@each $intensity, $color in $shades {
+			--clr-#{$type}-#{$intensity}: #{$color};
+		}
+	}
+
+	@each $value, $weight in $font-weights {
+		--fw-#{$value}: #{$weight};
+	}
+
+	@each $type, $font in $fonts {
+		--ff-#{$type}: "#{$font}", sans-serif;
+	}
+
+	--transition-delay: 250ms;
+}

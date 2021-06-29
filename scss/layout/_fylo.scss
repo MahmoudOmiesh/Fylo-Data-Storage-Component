@@ -1,0 +1,24 @@
+.fylo {
+	background-color: var(--clr-primary-100);
+	padding: var(--padding) calc(var(--padding) * 4) var(--padding) var(--padding);
+	@include rounded(1, 5, 1, 1);
+
+	&__icons {
+		display: flex;
+		gap: calc(var(--padding) / 2);
+	}
+
+	&__icon {
+		padding: calc(var(--padding) / 3);
+		border: 0;
+		@include rounded(0.5, 0.5, 0.5, 0.5);
+		background-color: var(--clr-primary-200);
+		transition: transform var(--transition-delay);
+		cursor: pointer;
+
+		&:hover,
+		&:focus {
+			transform: scale(1.1);
+		}
+	}
+}

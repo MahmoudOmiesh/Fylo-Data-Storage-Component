@@ -1,0 +1,34 @@
+body {
+	font-size: 14px;
+	font-weight: var(--fw-normal);
+	font-family: var(--ff-main);
+	background: bottom / contain no-repeat url(../images/bg-desktop.png)
+		var(--clr-primary-200);
+	display: grid;
+	place-content: center;
+
+	@include mq(medium) {
+		background-image: url(../images/bg-mobile.png);
+		background-size: cover;
+	}
+}
+
+.main {
+	--padding: 2rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	width: clamp(45rem, 50vw, 80rem);
+
+	@include mq(medium) {
+		flex-direction: column;
+		align-items: center;
+		row-gap: var(--padding);
+		width: auto;
+		padding: 0 calc(var(--padding) / 2);
+	}
+}
+
+.flow > * + * {
+	margin-top: 2rem;
+}
